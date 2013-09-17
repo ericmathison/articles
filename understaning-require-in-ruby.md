@@ -1,9 +1,9 @@
 Understanding require and Friends in Ruby
 =========================================
-Author: Eric Mathison
-Date: Sat Sep 14 17:06:03 PDT 2013
-Last edited: Sat Sep 14 17:06:20 PDT 2013
-Last checked for accuracy and currency: Sat Sep 14 17:06:47 PDT 2013
+###Author: Eric Mathison
+###Date: Sat Sep 14 17:06:03 PDT 2013
+###Last edited: Sat Sep 14 17:06:20 PDT 2013
+###Last checked for accuracy and currency: Sat Sep 14 17:06:47 PDT 2013
 
 My initial attempts at using `require` in ruby left me a bit confused. Not
 until later did I realize that Ruby's `require` method sits atop something more
