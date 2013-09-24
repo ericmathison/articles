@@ -1,5 +1,5 @@
-Understanding require and Friends in Ruby
-=========================================
+Understanding `require` and Friends in Ruby
+===========================================
 ####Author: Eric Mathison
 ####Date: Sat Sep 14 17:06:03 PDT 2013
 ####Last edited: Sat Sep 14 17:06:20 PDT 2013
@@ -16,7 +16,7 @@ references to an image in CSS or a reference to a JavaScript file in HTML. Not
 so. In fact, Ruby's `require` seems to have drawn several concepts from the
 UNIX environment.
 
-So How Does Ruby's require Work Anyway?
+So How Does Ruby's `require` Work Anyway?
 ---------------------------------------
 The best way to think of `require` is in relation to the UNIX `$PATH` variable.
 Just by way of a refresher, the `$PATH` variable in UNIX is a list of
