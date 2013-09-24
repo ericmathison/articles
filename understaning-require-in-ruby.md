@@ -2,19 +2,20 @@ Understanding `require` and Friends in Ruby
 ===========================================
 ####Author: Eric Mathison
 ####Date: Sat Sep 14 17:06:03 PDT 2013
-####Last edited: Sat Sep 14 17:06:20 PDT 2013
-####Last checked for accuracy and currency: Sat Sep 14 17:06:47 PDT 2013
+####Last edited: Mon Sep 23 20:13:29 PDT 2013
+####Last checked for accuracy and currency: Mon Sep 23 20:13:29 PDT 2013
 
-My initial attempts at using `require` in ruby left me a bit confused. Not
-until later did I realize that Ruby's `require` method sits atop something more
-organized and elegant than I had realized. It turns out that `require`s main
-use case is generally not one off, relative references to other random Ruby
-files as I had expected. Instead, require is generally used to look in certain
-pre-determined directory locations for Ruby libraries. I had previously sort
-of assumed that a require in ruby would be something like the relative
-references to an image in CSS or a reference to a JavaScript file in HTML. Not
-so. In fact, Ruby's `require` seems to have drawn several concepts from the
-UNIX environment.
+Ruby's `require` method is a tool for referencing and executing code that is
+not actually contained in the current file. My initial attempts at using
+`require` in ruby left me a bit confused. Not until later did I realize that
+Ruby's `require` method sits atop something more organized and elegant than I
+had realized. It turns out that `require`s main use case is generally not one
+off, relative references to other random Ruby files as I had expected. Instead,
+require is generally used to look in certain pre-determined directory locations
+for Ruby libraries. I had previously sort of assumed that a require in ruby
+would be something like the relative references to an image in CSS or a
+reference to a JavaScript file in HTML. Not so. In fact, Ruby's `require` seems
+to have drawn several concepts from the UNIX environment.
 
 So How Does Ruby's `require` Work Anyway?
 ---------------------------------------
