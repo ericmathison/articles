@@ -7,13 +7,13 @@ Understanding `require` and Friends in Ruby
 
 Ruby's `require` method is a tool for referencing and executing code that is
 not actually contained in the current file. My initial attempts at using
-`require` in ruby left me a bit confused. Not until later did I realize that
-Ruby's `require` method sits atop something more organized and elegant than I
-had realized. It turns out that `require`s main use case is generally not one
-off, relative references to other random Ruby files as I had expected. Instead,
-require is generally used to look in certain pre-determined directory locations
-for Ruby libraries. I had previously sort of assumed that a require in ruby
-would be something like the relative references to an image in CSS or a
+`require` left me a bit confused. Not until later did I realize that Ruby's
+`require` method sits atop something more organized and elegant than I had
+realized. It turns out that `require`s main use case is generally not one off,
+relative references to other random Ruby files as I had expected. Instead,
+`require` is generally used to look in certain pre-determined directory
+locations for Ruby libraries. I had previously sort of assumed that a require
+in Ruby would be something like the relative references to an image in CSS or a
 reference to a JavaScript file in HTML. Not so. In fact, Ruby's `require` seems
 to have drawn several concepts from the UNIX environment.
 
@@ -25,10 +25,10 @@ directories where executables can be found. So when you type the name of a
 program on any UNIX terminal, your computer is looking through the executable
 files in the directories specified in your `$PATH` variable. `require` does
 something very similar. When, for example, you write `require 'set'` at the top
-of your ruby file, you are telling ruby to look through a bunch of directories
+of your Ruby file, you are telling Ruby to look through a bunch of directories
 for a library called set.rb (Ruby's set library).
 
-So where does ruby look for set.rb? Well, once again, Ruby has something very
+So where does Ruby look for set.rb? Well, once again, Ruby has something very
 similar to UNIX's `$PATH` variable. It is the global variable `$LOAD_PATH` also
 sometimes known by it's ugly and undescriptive alias `$:` (which I don't suggest
 using by the way--short though it may be). It is an array of directory names
@@ -67,9 +67,9 @@ need to add directories to the load path manually as this is the environment's
 job. I mentioned above that the `$LOAD_PATH` contains an array of lib directory
 paths. RubyGems will, for example, automatically add the lib directory of gems
 installed on your computer to the load path. Well, that's actually only mostly
-true. If you *actually* run a ruby script that just outputs `$LOAD_PATH` without
+true. If you *actually* run a Ruby script that just outputs `$LOAD_PATH` without
 doing anything else, you won't see every single installed gem's load path
-listed. This is because RubyGems lazily loads gem's lib directories. So if you
+listed. This is because RubyGems lazily loads Gem's lib directories. So if you
 want to see your gem's lib directory listed in the load path you have to
 actually require it first. But things work essentially the same as if every
 single gem's lib directory was on the load path.
@@ -80,25 +80,25 @@ UNIX `$PATH` variable so that a gem's executables can be run from the terminal.
 
 Understanding `load`
 --------------------
-The `load` method is very similar to require. The main differences is that it
+The `load` method is very similar to `require`. The main differences is that it
 will run the referenced code as many times as `load` calls it. As I mentioned
 above, `require` only runs the first time.
 
 `load` must be given the '.rb' file extension because it won't be inferred like
-it was with require.
+it was with `require`.
 
-All in all, I would say that load has a fairly small amount of usefulness.
+All in all, I would say that `load` has a fairly small amount of usefulness.
 Probably it's main use case is re-running a file from a Ruby REPL (like pry or
 irb) after making some edits.
 
 Understanding `require_relative`
 --------------------------------
-`require_relative` is essentially what I had originally thought require would be
-used for. If you want to reference a file relative to another file, not treat it
-like a library, and bypass the load path, this is the tool for you.
+`require_relative` is essentially what I had originally thought `require` would
+be used for. If you want to reference a file relative to another file, not
+treat it like a library, and bypass the load path, this is the tool for you.
 
 In order to understand the need for `require_relative`, we must understand a bit
-more about `require`. So far, the only use I've mentioned for require is
+more about `require`. So far, the only use I've mentioned for `require` is
 executing code on the load path (code that would be considered a library).
 That's for good reason. That's what it is good for and you probably shouldn't be
 using `require` for anything else.
@@ -114,7 +114,7 @@ something like this:
 argument. Specifying the second argument essentially says, look for my\_file.rb
 relative to such and such directory. `File.dirname(__FILE__)` returns the
 directory path for the current file (that this line was written in). So put
-together, require is getting passed the full path to my\_file.rb which is the
+together, `require` is getting passed the full path to my\_file.rb which is the
 file sitting in the same directory in which this line was written. Another way
 of writing the same thing looks like this:
 
@@ -131,7 +131,7 @@ perspective, adding the `'../'` brings us up a directory but from our
 perspective, it simply causes current\_file.rb to be removed from the path. So,
 with `'../'` back in place, the path would expand to `'/home/eric/my_file.rb'`.
 
-Let me back up and explain why passing require the full path to a file would
+Let me back up and explain why passing `require` the full path to a file would
 even be necessary. When I write something like `require '../my_file.rb'`, that
 path is relative to the current working directory of the process executing this
 line NOT necessarily the file it was written in. That's important and it means
@@ -162,7 +162,7 @@ One last note about `require_relative`: Have you ever noticed that using
 `require_relative` doesn't work on a Ruby REPL like pry? Think about it. If
 `require_relative` is requiring relative to a file, which file would that be in
 a REPL? Well, there isn't really a file that fits that bill. Your alternatives
-in this situation are to use `load` or `require`. If you use require though,
+in this situation are to use `load` or `require`. If you use `require` though,
 make sure to remember the leading `'./'` or `'../'` and don't do this in
 production code!. And if you ever want to determine what the current working
 directory of your Ruby process is, you can always output `Dir.pwd`.
@@ -173,7 +173,7 @@ So, we have seen that `require`, `require_relative` and `load` all fulfil
 different use cases when used as intended. `require` is generally for
 referencing libraries, `require_relative` is for making one off local references
 within an application (typically deployed applications, not within libraries)
-and about all load is good for is re-loading a script in a REPL. Well, that's
+and about all `load` is good for is re-loading a script in a REPL. Well, that's
 how I see it anyway :).
 
 
