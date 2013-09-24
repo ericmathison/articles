@@ -150,7 +150,7 @@ directory (so that the current working directory of the process is the same as
 the location of current\_file.rb), it is not possible to do something like
 `require 'myfile'` although `require './myfile'` would work. This is because
 since Ruby 1.9.2, the current working directory is no longer part of the load
-path. In the UNIX world, this is considered a safe security practice since it
+path. In the UNIX world, this is considered a good security practice since it
 avoids the issue of accidentally running an unexpected script by simply
 executing a program from a directory that just happens to have a file with the
 same name. Since `require_relative` is requiring relative to the current file
