@@ -2,8 +2,8 @@ Understanding `require` and Friends in Ruby
 ===========================================
 ####Author: Eric Mathison
 ####Date: Sat Sep 14 17:06:03 PDT 2013
-####Last edited: Mon Sep 23 20:13:29 PDT 2013
-####Last checked for accuracy and currency: Mon Sep 23 20:13:29 PDT 2013
+####Last edited: Fri Sep 27 22:56:01 PDT 2013
+####Last checked for accuracy and currency: Fri Sep 27 22:56:01 PDT 2013
 
 Ruby's `require` method is a tool for referencing and executing code that is
 not actually contained in the current file. My initial attempts at using
@@ -139,9 +139,9 @@ that depending on what directory you are in when you run `ruby current_file.rb`,
 your code may or may not be able to find your relative reference to my\_file.rb.
 Yikes!
 
-Enter `require_relative` stage left. `require_relative` has the same result as
-the above two examples that use `require` with the added benefit of a clean
-syntax. So instead of needing that massive monstrosity, all that
+Enter `require_relative` stage left. `require_relative` does essentially what
+the above two examples using `require` do except with the added benefit of a
+clean syntax. So instead of needing that massive monstrosity, all that
 `require_relative` needs to do is `require_relative 'myfile'` and my file will
 be reference relative the file containing that line (current\_file.rb in our
 example).
