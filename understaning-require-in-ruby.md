@@ -74,8 +74,8 @@ actually require it first. But things work essentially the same as if every
 single gem's lib directory was on the load path.
 
 Slightly unrelated to the topic of this article but perhaps also interesting to
-note is that RubyGems will also add the contents of a gem's bin directory to the
-UNIX `$PATH` variable so that a gem's executables can be run from the terminal.
+note is that RubyGems will also add a gem's bin directory to the UNIX `$PATH`
+variable so that a gem's executables can be run from the terminal.
 
 Understanding `load`
 --------------------
