@@ -9,7 +9,7 @@ Ruby's `require` method is a tool for referencing and executing code that is
 not actually contained in the current file. My initial attempts at using
 `require` left me a bit confused. Not until later did I realize that Ruby's
 `require` method sits atop something more organized and elegant than I had
-realized. It turns out that `require`s main use case is generally not one off,
+realized. It turns out that `require`'s main use case is generally not one off,
 relative references to other random Ruby files as I had expected. Instead,
 `require` is generally used to look in certain pre-determined directory
 locations for Ruby libraries. I had previously sort of assumed that a require
@@ -89,7 +89,7 @@ it was with `require`.
 
 All in all, I would say that `load` has a fairly small amount of usefulness.
 Probably it's main use case is re-running a file from a Ruby REPL (like pry or
-irb) after making some edits.  It's also very helpful when you need to load ruby files that do not have a .rb extension since `require` will automatically look for files ending in .rb.  This situation can occur when tryig to load ruby script files or executables which tend not to have an extension.
+irb) after making some edits.  It's also very helpful when you need to load ruby files that do not have a .rb extension since `require` will automatically look for files ending in .rb.  This situation can occur when trying to load ruby script files or executables which tend not to have an extension.
 
 Understanding `require_relative`
 --------------------------------
@@ -103,7 +103,7 @@ executing code on the load path (code that would be considered a library).
 That's for good reason. That's what it is good for and you probably shouldn't be
 using `require` for anything else.
 
-In the past (Ruby 1.8 and earlier), if you wanted to to a one off `require`
+In the past (Ruby 1.8 and earlier), if you wanted to do a one off `require`
 without managing the load path, the best way would have been to generate the
 full path to that file and pass it as an argument to `require`. It would look
 something like this:
