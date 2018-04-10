@@ -88,7 +88,10 @@ it was with `require`.
 
 All in all, I would say that `load` has a fairly small amount of usefulness.
 Probably it's main use case is re-running a file from a Ruby REPL (like pry or
-irb) after making some edits.  It's also very helpful when you need to load ruby files that do not have a .rb extension since `require` will automatically look for files ending in .rb.  This situation can occur when trying to load ruby script files or executables which tend not to have an extension.
+irb) after making some edits.  It's also very helpful when you need to load ruby
+files that do not have a .rb extension since `require` will automatically look
+for files ending in .rb.  This situation can occur when trying to load ruby
+script files or executables which tend not to have an extension.
 
 Understanding `require_relative`
 --------------------------------
