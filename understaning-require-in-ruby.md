@@ -1,8 +1,8 @@
 Understanding `require` and Friends in Ruby
 ===========================================
-####Author: Eric Mathison
-####Date: September 14, 2013
-####Last edited: April 10, 2018
+#### Author: Eric Mathison
+#### Date: September 14, 2013
+#### Last edited: May 14, 2018
 
 Ruby's `require` method is a tool for referencing and executing code that is
 not actually contained in the current file. My initial attempts at using
@@ -19,7 +19,7 @@ to have drawn several concepts from the UNIX environment.
 So How Does Ruby's `require` Work Anyway?
 ---------------------------------------
 The best way to think of `require` is in relation to the UNIX `$PATH` variable.
-Just by way of a refresher, the `$PATH` variable in UNIX is a list of
+Just by way of a refresher, the `$PATH` variable in UNIX contains a list of
 directories where executables can be found. So when you type the name of a
 program on any UNIX terminal, your computer is looking through the executable
 files in the directories specified in your `$PATH` variable. `require` does
