@@ -2,7 +2,7 @@ Understanding `require` and Friends in Ruby
 ===========================================
 #### Author: Eric Mathison
 #### Date: September 14, 2013
-#### Last edited: May 14, 2018
+#### Last edited: April 5, 2020
 
 Ruby's `require` method is a tool for referencing and executing code that is
 not actually contained in the current file. My initial attempts at using
@@ -177,12 +177,3 @@ referencing libraries, `require_relative` is for making one off local references
 within an application (typically deployed applications, not within libraries)
 and about all `load` is good for is re-loading a script in a REPL. Well, that's
 how I see it anyway :).
-
-
-\* Prior to version 1.9, Ruby would only do a string comparison between required
-files. So if you require a file using the full path (this is typically what
-happens when requiring a file from the load path) and then require it again with
-a relative path (`require './myfile'` for example), it could inadvertently be
-run twice. Since Ruby 1.9 however the path to a required file is expanded to the
-full path before attempting to add it to the `$LOADED_FEATURES` variable. At
-least, that's what it appeared like from my experimentation.
