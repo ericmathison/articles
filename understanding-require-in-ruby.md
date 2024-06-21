@@ -145,7 +145,7 @@ Enter `require_relative` stage left. `require_relative` does essentially what
 the above two examples using `require` do except with the added benefit of a
 clean syntax. So instead of needing that massive monstrosity, all that
 `require_relative` needs to do is `require_relative 'myfile'` and my file will
-be reference relative the file containing that line (current\_file.rb in our
+be referenced relative to the file containing that line (current\_file.rb in our
 example).
 
 Also note that even if you are running current\_file.rb from it's containing
