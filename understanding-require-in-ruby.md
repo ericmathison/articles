@@ -2,7 +2,7 @@ Understanding `require` and Friends in Ruby
 ===========================================
 #### Author: Eric Mathison
 #### Date: September 14, 2013
-#### Last edited: April 5, 2020
+#### Last edited: June 21, 2024
 
 Ruby's `require` method is a tool for referencing and executing code that is
 not actually contained in the current file. My initial attempts at using
