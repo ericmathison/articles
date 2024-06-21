@@ -171,7 +171,7 @@ directory of your Ruby process is, you can always output `Dir.pwd`.
 
 Conclusion
 ----------
-So, we have seen that `require`, `require_relative` and `load` all fulfil
+So, we have seen that `require`, `require_relative` and `load` all fulfill
 different use cases when used as intended. `require` is generally for
 referencing libraries, `require_relative` is for making one off local references
 within an application (typically deployed applications, not within libraries)
