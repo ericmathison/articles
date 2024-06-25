@@ -2,7 +2,7 @@ Understanding `require` and Friends in Ruby
 ===========================================
 #### Author: Eric Mathison
 #### Date: September 14, 2013
-#### Last edited: April 5, 2020
+#### Last edited: June 21, 2024
 
 Ruby's `require` method is a tool for referencing and executing code that is
 not actually contained in the current file. My initial attempts at using
@@ -145,7 +145,7 @@ Enter `require_relative` stage left. `require_relative` does essentially what
 the above two examples using `require` do except with the added benefit of a
 clean syntax. So instead of needing that massive monstrosity, all that
 `require_relative` needs to do is `require_relative 'myfile'` and my file will
-be reference relative the file containing that line (current\_file.rb in our
+be referenced relative to the file containing that line (current\_file.rb in our
 example).
 
 Also note that even if you are running current\_file.rb from it's containing
@@ -171,7 +171,7 @@ directory of your Ruby process is, you can always output `Dir.pwd`.
 
 Conclusion
 ----------
-So, we have seen that `require`, `require_relative` and `load` all fulfil
+So, we have seen that `require`, `require_relative` and `load` all fulfill
 different use cases when used as intended. `require` is generally for
 referencing libraries, `require_relative` is for making one off local references
 within an application (typically deployed applications, not within libraries)
